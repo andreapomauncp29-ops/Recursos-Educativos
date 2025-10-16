@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Actividad 2 | Identidades Trigonométricas </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Glirio A. Santivañez - Andrea J. Poma" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 Portable - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Identidades Trigonométricas</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción</a></li>
+   <li><a href="las_identidades_fundamentales.html" class="daddy">Las Identidades Fundamentales</a>
+   <ul class="other-section">
+      <li><a href="identidades_recprocas.html" class="no-ch">Identidades Recíprocas</a></li>
+      <li><a href="identidades_por_cociente.html" class="no-ch">Identidades por Cociente</a></li>
+      <li><a href="identidades_pitagricas.html" class="no-ch">Identidades Pitagóricas</a></li>
+   </ul>
+   </li>
+   <li><a href="ejemplos.html" class="no-ch">Ejemplos</a></li>
+   <li class="current-page-parent"><a href="actividades_prcticas.html" class="current-page-parent daddy">Actividades Prácticas</a>
+   <ul>
+      <li><a href="actividad_1.html" class="no-ch">Actividad 1</a></li>
+      <li id="active"><a href="actividad_2.html" class="active no-ch">Actividad 2</a></li>
+   </ul>
+   </li>
+   <li><a href="autoevaluacin.html" class="no-ch">Autoevaluación</a></li>
+   <li><a href="reflexin.html" class="no-ch">Reflexión</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="actividad_1.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Actividad 2</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Completa de manera correcta:</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_131_2" class="block iDevice_content">
+<div class="exe-text"><p></p>
+<header>
+<h1><strong><span style="font-size: 18pt;">Actividad 2.1: Simplifica</span></strong></h1>
+</header>
+<p><main>
+<section class="card">
+<p>Escribe la simplificación de: <strong> (1 - sin²θ) / cos θ </strong></p>
+<div class="exercise"><input id="a1" type="text" placeholder="Tu respuesta (usa cos²θ si quieres)" /> <button class="btn" onclick="check1()">Comprobar</button>
+<p id="r1"></p>
+</div>
+</section>
+<section class="card">
+<h2>Actividad 2.2: Equivalencia</h2>
+<p>Elige si la siguiente igualdad es verdadera: <br /><strong> (1 - sin θ) / cos θ = cos θ / (1 + sin θ) </strong></p>
+<button class="btn" onclick="check2(true)">Verdadero</button> <button class="btn" onclick="check2(false)">Falso</button>
+<p id="r2"></p>
+</section>
+<section class="card">
+<h2>Actividad 3: Completa</h2>
+<p>Completa: sin²θ + <input id="c3" type="text" style="width: 120px;" /> = 1</p>
+<button class="btn" onclick="check3()">Comprobar</button>
+<p id="r3"></p>
+</section>
+</main></p>
+<p></p>
+<p>
+<script>
+    function normalize(s){return s.trim().toLowerCase().replace(/\s+/g,'');}
+    function check1(){
+      const v = normalize(document.getElementById('a1').value);
+      const r = document.getElementById('r1');
+      if(v==='' ) { r.innerHTML='<span class="bad">Escribe una respuesta.</span>'; return;}
+      // accept: cos^2 theta, cos^2θ, cos^2, cos^2θ etc -> just check for 'cos' and '2' or '^2'
+      if(v.includes('cos') && (v.includes('2') || v.includes('^2') || v.includes('^2θ') || v.includes('²'))){
+        r.innerHTML='<span class="ok">Correcto. (1 - sin²θ) / cos θ = cos θ</span>';
+      } else if(v.includes('cosθ') || v.includes('cos') && v.includes('theta')){
+        r.innerHTML='<span class="ok">Correcto.</span>';
+      } else {
+        r.innerHTML='<span class="bad">Respuesta no del todo. Piensa en la identidad sin²θ + cos²θ = 1.</span>';
+      }
+    }
+    function check2(ans){
+      const r=document.getElementById('r2');
+      if(ans){
+        r.innerHTML='<span class="ok">Verdadero — son equivalentes tras manipulación algebraica.</span>';
+      } else {
+        r.innerHTML='<span class="bad">Incorrecto — intenta algebraicamente transformar para verificar.</span>';
+      }
+    }
+    function check3(){
+      const v=normalize(document.getElementById('c3').value);
+      const r=document.getElementById('r3');
+      if(v.includes('cos')) r.innerHTML='<span class="ok">Correcto: cos²θ</span>'; else r.innerHTML='<span class="bad">No es correcto.</span>';
+    }
+  </script>
+</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="actividad_1.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="autoevaluacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
